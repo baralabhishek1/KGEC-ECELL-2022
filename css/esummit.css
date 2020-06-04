@@ -17,10 +17,21 @@ body{
   
 } */
 
-.rose{
-  width:95% ;
-  margin:2.5%;
+.rose img{
+  margin:0%;
+    width:100%;
+    height:100%;
+    border: 1px solid white;
+    
 }
+
+.rose{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+
 .main-body{
     width: 100%;
     height: 100%;
@@ -121,8 +132,8 @@ body{
     margin:0%
   }
   .rose img {
-    margin:0%;
-    width:100%;
+    margin-left:-6%;
+    width:112%;
     height:100%
   }
 }
