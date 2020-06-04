@@ -81,10 +81,8 @@ body{
   color:rgb(133, 194, 216);
   font-size: 30px;
 }
-.mmm :hover{
-  color: rebeccapurple;
-  text-decoration-color: blueviolet;
-  font-size: larger;
+.mmm :hover{  
+  color: fuchsia;
 }
 
 @media(max-width:992px){
