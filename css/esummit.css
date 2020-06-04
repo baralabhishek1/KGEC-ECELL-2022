@@ -77,6 +77,16 @@ body{
   font-size: 20px;
 }
 
+.mmm{
+  color:rgb(133, 194, 216);
+  font-size: 30px;
+}
+.mmm :hover{
+  color: rebeccapurple;
+  text-decoration-color: blueviolet;
+  font-size: larger;
+}
+
 @media(max-width:992px){
     .holder1{
         margin-top: -22px;
