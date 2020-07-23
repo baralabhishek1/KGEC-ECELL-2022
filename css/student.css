@@ -124,6 +124,10 @@
   padding:7px 17px;
 }*/
 
+.mmm :hover{
+  color: rgb(98, 0, 255);
+}
+
 @media(max-width:769px){
   .row-main{
     width:100%;
