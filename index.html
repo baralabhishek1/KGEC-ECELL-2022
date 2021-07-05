@@ -108,7 +108,7 @@
             </div>
         </div>-->
 
-        
+
   <style>
     #myImg {
       border-radius: 5px;
@@ -222,7 +222,7 @@
       cursor: pointer;
     }
 
-   
+
 
     /* 100% Image Width on Smaller Screens */
     @media only screen and (max-width: 700px) {
@@ -244,7 +244,7 @@
       <!-- <span class="close">&times;</span> -->
 
       <div class="imgdiv">
-        <a href="esummit.html" class="imgContent"><img class="modal-content" id="img01" src="img/ESUMMIT2021.jpg"></a>
+        <a href="esummit.html" class="imgContent"><img class="modal-content" id="img01" src="img/ESUMMIT2021popup.png"></a>
       </div>
 
 
@@ -263,19 +263,19 @@
       var img = document.getElementById("myImg");
       var modalImg = document.getElementById("img01");
       var captionText = document.getElementById("caption");
-      
+
       window.onload = function () {
-        
+
         setTimeout(function(){
           document.getElementById("modal_audio").play();
           modal.style.display = "inline-block";
           modalImg.src = img.src;
-          
+
         }, 2000);
-        
-        
+
+
       }
-      
+
 
       // When the user clicks on <span> (x), close the modal
       //span.onclick = function () {
@@ -286,7 +286,7 @@
       document.addEventListener(
         "click",
         function (event) {
-          
+
           if (
             !event.target.closest("modal-content")
           ) {
@@ -301,9 +301,9 @@
         document.querySelector(".imgcontent").style.display = "none"
         document.querySelector(".model-content").style.display = "none"
       }
-      
-      
-      
+
+
+
     </script>
 
 
