@@ -17,6 +17,8 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
     rel="stylesheet">
 
+  <script src="js/esummit.js"></script>
+
   <!-- Bootstrap CSS File -->
   <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -52,12 +54,39 @@
       min-width: 100px;
       height: auto;
     }
+
+    #playAudio {
+      z-index: 45;
+      margin: 2px;
+      margin-top: -10px;
+      font-family: "Montserrat bold", Gadget, sans-serif;
+      font-size: 20px;
+      padding: 8px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: #FFF;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 2px 25px 25px 2px;
+      width: 150px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+      cursor: pointer;
+      display: inline-block;
+      background-image: linear-gradient(to right, #DD5E89 0%, #fd9b5d 51%, #f8568c 100%)
+      
+    }
+    #playAudio:hover {
+      box-shadow: 0 10px 20px rgba(207, 206, 206, 0.842), 0 3px 3px rgba(255, 255, 255, 0.801);
+      margin: 2px 10px 12px 10px;
+    }
   </style>
 
 </head>
 
 <body>
-  
+
   <!-- Preloader ----------------->
   <div id="preloader">
     <div class="preloader">
@@ -74,6 +103,9 @@
       </div>
     </div>
   </div>
+
+
+
 
   <!--==========================
     Header
@@ -138,10 +170,14 @@
   <br>
   <br>
   <br>
-  <div class="audio-cont">
-    <audio id="my_audio" src="audio files/audiofm.mpeg" autoplay="autoplay" ></audio>
-  </div>
-  
+
+  <audio id="my_audio" src="audio files/audiofm.mpeg" autoplay></audio>
+
+
+
+  <button id="playAudio">Pause</button>
+
+
   <section id="esummit">
     <div class="container">
       <header class="sec-header">
@@ -397,9 +433,24 @@
   <script src="js/main.js"></script>
 
   <script>
-    window.load= function(){
+    window.load = function () {
       document.getElementById("my_audio").play();
     }
+
+    document.getElementById("playAudio").addEventListener("click", function () {
+      var audio = document.getElementById('my_audio');
+      if (this.className == "paused") {
+        audio.play();
+        this.className = "is-playing";
+        this.innerHTML = "Pause";
+      }
+      else {
+        audio.pause();
+        this.className = "paused";
+        this.innerHTML = "Play";
+      }
+
+    });
   </script>
 
 </body>
